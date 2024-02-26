@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { CardComponent } from './card/card.component';
 
 @Component({
     selector: 'app-quiz',
     standalone: true,
-    imports: [],
+    imports: [CardComponent],
     templateUrl: './quiz.component.html',
     styleUrl: './quiz.component.scss'
 })
