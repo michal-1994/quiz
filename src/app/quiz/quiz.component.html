@@ -1,7 +1,11 @@
 <section class="quiz__page">
     <div class="container">
         <app-card
-            *ngFor="let questionItem of questions"
-            [data]="questionItem"></app-card>
+            *ngFor="let questionItem of questions; let i = index"
+            [data]="questionItem"
+            [currentIndex]="currentIndex"
+            [questionIndex]="i"
+            (nextQuestionEvent)="handleNextQuestion()"
+            (prevQuestionEvent)="handlePrevQuestion()"></app-card>
     </div>
 </section>

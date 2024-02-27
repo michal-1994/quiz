@@ -1,6 +1,10 @@
-<mat-card class="question__card">
+<mat-card
+    *ngIf="questionIndex !== undefined && questionIndex === currentIndex"
+    class="question__card">
     <mat-card-header class="question__card--title">
-        <mat-card-title>{{ data?.question }}</mat-card-title>
+        <mat-card-title
+            >{{ questionIndex + 1 }}. {{ data?.question }}</mat-card-title
+        >
     </mat-card-header>
     <mat-card-content>
         <mat-radio-group
@@ -12,7 +16,20 @@
                 }}</mat-radio-button>
             }
         </mat-radio-group>
-        <br />
-        <div>Twoja odpowiedź: {{ youtAnswer }}</div>
+        <mat-card-actions align="end">
+            <button
+                mat-raised-button
+                color="primary"
+                (click)="onClickPrevQuestion()">
+                Poprzednie
+            </button>
+            &nbsp;
+            <button
+                mat-raised-button
+                color="primary"
+                (click)="onClickNextQuestion()">
+                Następne
+            </button>
+        </mat-card-actions>
     </mat-card-content>
 </mat-card>

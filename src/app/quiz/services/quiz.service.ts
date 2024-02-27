@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { QuestionData } from '../models/question.model';
+import { Question } from '../models/question.model';
 
 @Injectable({
     providedIn: 'root'
@@ -11,7 +11,7 @@ export class QuizService {
 
     constructor(private http: HttpClient) {}
 
-    getQuestionData(): Observable<QuestionData> {
-        return this.http.get<QuestionData>(this.questionsUrl);
+    getQuestions(): Observable<Question[]> {
+        return this.http.get<Question[]>(this.questionsUrl);
     }
 }

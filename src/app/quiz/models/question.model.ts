@@ -4,8 +4,3 @@ export interface Question {
     answers: string[];
     correct_answer: number;
 }
-
-export interface QuestionData {
-    questions: Question[];
-    length: number;
-}
