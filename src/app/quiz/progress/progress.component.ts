@@ -1,5 +1,5 @@
-import { Component, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
@@ -11,14 +11,13 @@ import { CommonModule } from '@angular/common';
     templateUrl: './progress.component.html',
     styleUrl: './progress.component.scss'
 })
-export class ProgressComponent implements OnDestroy {
-    private routerSubscription: Subscription;
+export class ProgressComponent implements OnDestroy, OnInit {
+    private routerSubscription: Subscription = new Subscription();
     public currentUrl: string = '';
 
-    constructor(
-        private route: ActivatedRoute,
-        private router: Router
-    ) {
+    constructor(private router: Router) {}
+
+    ngOnInit() {
         this.routerSubscription = this.router.events
             .pipe(filter(event => event instanceof NavigationEnd))
             .subscribe(() => {
