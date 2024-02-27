@@ -7,7 +7,7 @@ import { QuestionData } from '../models/question.model';
     providedIn: 'root'
 })
 export class QuizService {
-    private questionsUrl = 'assets/questions.json';
+    private questionsUrl = 'assets/api/questions.json';
 
     constructor(private http: HttpClient) {}
 

@@ -13,7 +13,12 @@ export class HomeComponent {
     constructor(private router: Router) {}
 
     handleStartQuiz(numberOfQuestions: number) {
-        console.log('handleStartQuiz: ', numberOfQuestions);
+        console.log('HomeComponent [handleStartQuiz]: ', numberOfQuestions);
+
+        // Set number of questions to store
+        // If number of questions are choosen set '/quiz' guard to true
+        // Redirect to quiz
+
         this.router.navigateByUrl('/quiz');
     }
 }
