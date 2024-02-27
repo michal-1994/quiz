@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from './components/card/card.component';
 import { QuizService } from './services/quiz.service';
@@ -6,7 +7,7 @@ import { Question, QuestionData } from './models/question.model';
 @Component({
     selector: 'app-quiz',
     standalone: true,
-    imports: [CardComponent],
+    imports: [CommonModule, CardComponent],
     templateUrl: './quiz.component.html',
     styleUrl: './quiz.component.scss'
 })
@@ -22,6 +23,8 @@ export class QuizComponent implements OnInit {
             .subscribe((questionData: QuestionData) => {
                 this.questions = questionData.questions;
                 this.questionsLength = questionData.length;
+
+                // TODO: Get {numberOfQuestions} random questions
 
                 console.log('QuizComponent [ngOnInit]: ', this.questions);
                 console.log('QuizComponent [ngOnInit]: ', this.questionsLength);

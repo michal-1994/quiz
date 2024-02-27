@@ -15,9 +15,8 @@ export class HomeComponent {
     handleStartQuiz(numberOfQuestions: number) {
         console.log('HomeComponent [handleStartQuiz]: ', numberOfQuestions);
 
-        // Set number of questions to store
-        // If number of questions are choosen set '/quiz' guard to true
-        // Redirect to quiz
+        // TODO: Set number of questions to store
+        // TODO: If number of questions are choosen set '/quiz' guard to true
 
         this.router.navigateByUrl('/quiz');
     }
