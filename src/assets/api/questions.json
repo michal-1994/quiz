@@ -1,0 +1,145 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "pytanie": "Jak nazywa się szkoła czarodziejów, do której uczęszcza Harry Potter?",
+            "odpowiedzi": [
+                "Hogwarts",
+                "Beauxbatons",
+                "Durmstrang",
+                "Ilvermorny"
+            ],
+            "odpowiedz_poprawna": 0
+        },
+        {
+            "id": 2,
+            "pytanie": "Kto jest najlepszym przyjacielem Harry'ego Pottera?",
+            "odpowiedzi": [
+                "Ron Weasley",
+                "Hermiona Granger",
+                "Neville Longbottom",
+                "Draco Malfoy"
+            ],
+            "odpowiedz_poprawna": 0
+        },
+        {
+            "id": 3,
+            "pytanie": "Kto jest mistrzem eliksirów w Hogwarcie?",
+            "odpowiedzi": [
+                "Severus Snape",
+                "Pomona Sprout",
+                "Filius Flitwick",
+                "Horace Slughorn"
+            ],
+            "odpowiedz_poprawna": 3
+        },
+        {
+            "id": 4,
+            "pytanie": "Jakie zwierzę jest patronusem Harry'ego Pottera?",
+            "odpowiedzi": ["Sowa", "Kot", "Pies", "Jelen"],
+            "odpowiedz_poprawna": 3
+        },
+        {
+            "id": 5,
+            "pytanie": "Jaka postać jest związana z wytwórniami różdżek w Ollivander's?",
+            "odpowiedzi": [
+                "Alastor Moody",
+                "Garrick Ollivander",
+                "Dolores Umbridge",
+                "Sybill Trelawney"
+            ],
+            "odpowiedz_poprawna": 1
+        },
+        {
+            "id": 6,
+            "pytanie": "Kto jest dyrektorem Hogwartu po Dumbledore'ie?",
+            "odpowiedzi": [
+                "Dolores Umbridge",
+                "Severus Snape",
+                "Minerva McGonagall",
+                "Horace Slughorn"
+            ],
+            "odpowiedz_poprawna": 2
+        },
+        {
+            "id": 7,
+            "pytanie": "Co to jest błyskawiczny odwrót?",
+            "odpowiedzi": [
+                "Zaklęcie ochronne",
+                "Zaklęcie niewidzialności",
+                "Zaklęcie teleportacji",
+                "Zaklęcie paraliżujące"
+            ],
+            "odpowiedz_poprawna": 2
+        },
+        {
+            "id": 8,
+            "pytanie": "Kto jest autorem książki 'Bestiariusz fantastyczny'?",
+            "odpowiedzi": [
+                "Gilderoy Lockhart",
+                "Newt Scamander",
+                "Luna Lovegood",
+                "Rubeus Hagrid"
+            ],
+            "odpowiedz_poprawna": 1
+        },
+        {
+            "id": 9,
+            "pytanie": "Ile domów szkolnych jest w Hogwarcie?",
+            "odpowiedzi": ["2", "3", "4", "5"],
+            "odpowiedz_poprawna": 2
+        },
+        {
+            "id": 10,
+            "pytanie": "Jaki przedmiot nauczania prowadziła Sybill Trelawney?",
+            "odpowiedzi": [
+                "Latanie",
+                "Wróżbiarstwo",
+                "Transmutacja",
+                "Zaklęcia"
+            ],
+            "odpowiedz_poprawna": 1
+        },
+        {
+            "id": 11,
+            "pytanie": "Co studiuje Luna Lovegood?",
+            "odpowiedzi": ["Zaklęcia", "Wróżbiarstwo", "Latanie", "Rozgwiazdy"],
+            "odpowiedz_poprawna": 3
+        },
+        {
+            "id": 12,
+            "pytanie": "Kto jest założycielem domu Hufflepuff?",
+            "odpowiedzi": [
+                "Salazar Slytherin",
+                "Rowena Ravenclaw",
+                "Helga Hufflepuff",
+                "Godric Gryffindor"
+            ],
+            "odpowiedz_poprawna": 2
+        },
+        {
+            "id": 13,
+            "pytanie": "Jak nazywa się zjawa, która podąża za osobami, które przeżyły śmierć?",
+            "odpowiedzi": ["Thestral", "Kelpie", "Banshee", "Poltergeist"],
+            "odpowiedz_poprawna": 0
+        },
+        {
+            "id": 14,
+            "pytanie": "Kto jest ministrem magii w serii Harry Potter?",
+            "odpowiedzi": [
+                "Rufus Scrimgeour",
+                "Cornelius Fudge",
+                "Kingsley Shacklebolt",
+                "Dolores Umbridge"
+            ],
+            "odpowiedz_poprawna": 2
+        },
+        {
+            "id": 15,
+            "pytanie": "Jaki kolor ma miotła Firebolt, na której lata Harry?",
+            "odpowiedzi": ["Czarny", "Zielony", "Czerwony", "Złoty"],
+            "odpowiedz_poprawna": 3
+        }
+    ],
+    "length": 15
+}
