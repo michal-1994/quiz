@@ -3,7 +3,7 @@
         "id": 1,
         "question": "Jak nazywa się szkoła czarodziejów, do której uczęszcza Harry Potter?",
         "answers": ["Hogwarts", "Beauxbatons", "Durmstrang", "Ilvermorny"],
-        "correct_answer": 0
+        "correctAnswer": 0
     },
     {
         "id": 2,
@@ -14,7 +14,7 @@
             "Neville Longbottom",
             "Draco Malfoy"
         ],
-        "correct_answer": 0
+        "correctAnswer": 0
     },
     {
         "id": 3,
@@ -25,13 +25,13 @@
             "Filius Flitwick",
             "Horace Slughorn"
         ],
-        "correct_answer": 3
+        "correctAnswer": 3
     },
     {
         "id": 4,
         "question": "Jakie zwierzę jest patronusem Harry'ego Pottera?",
         "answers": ["Sowa", "Kot", "Pies", "Jelen"],
-        "correct_answer": 3
+        "correctAnswer": 3
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
             "Dolores Umbridge",
             "Sybill Trelawney"
         ],
-        "correct_answer": 1
+        "correctAnswer": 1
     },
     {
         "id": 6,
@@ -53,7 +53,7 @@
             "Minerva McGonagall",
             "Horace Slughorn"
         ],
-        "correct_answer": 2
+        "correctAnswer": 2
     },
     {
         "id": 7,
@@ -64,7 +64,7 @@
             "Zaklęcie teleportacji",
             "Zaklęcie paraliżujące"
         ],
-        "correct_answer": 2
+        "correctAnswer": 2
     },
     {
         "id": 8,
@@ -75,25 +75,25 @@
             "Luna Lovegood",
             "Rubeus Hagrid"
         ],
-        "correct_answer": 1
+        "correctAnswer": 1
     },
     {
         "id": 9,
         "question": "Ile domów szkolnych jest w Hogwarcie?",
         "answers": ["2", "3", "4", "5"],
-        "correct_answer": 2
+        "correctAnswer": 2
     },
     {
         "id": 10,
         "question": "Jaki przedmiot nauczania prowadziła Sybill Trelawney?",
         "answers": ["Latanie", "Wróżbiarstwo", "Transmutacja", "Zaklęcia"],
-        "correct_answer": 1
+        "correctAnswer": 1
     },
     {
         "id": 11,
         "question": "Co studiuje Luna Lovegood?",
         "answers": ["Zaklęcia", "Wróżbiarstwo", "Latanie", "Rozgwiazdy"],
-        "correct_answer": 3
+        "correctAnswer": 3
     },
     {
         "id": 12,
@@ -104,13 +104,13 @@
             "Helga Hufflepuff",
             "Godric Gryffindor"
         ],
-        "correct_answer": 2
+        "correctAnswer": 2
     },
     {
         "id": 13,
         "question": "Jak nazywa się zjawa, która podąża za osobami, które przeżyły śmierć?",
         "answers": ["Thestral", "Kelpie", "Banshee", "Poltergeist"],
-        "correct_answer": 0
+        "correctAnswer": 0
     },
     {
         "id": 14,
@@ -121,12 +121,12 @@
             "Kingsley Shacklebolt",
             "Dolores Umbridge"
         ],
-        "correct_answer": 2
+        "correctAnswer": 2
     },
     {
         "id": 15,
         "question": "Jaki kolor ma miotła Firebolt, na której lata Harry?",
         "answers": ["Czarny", "Zielony", "Czerwony", "Złoty"],
-        "correct_answer": 3
+        "correctAnswer": 3
     }
 ]
