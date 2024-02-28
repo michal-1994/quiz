@@ -2,6 +2,6 @@ export interface Question {
     id: number;
     question: string;
     answers: string[];
-    correctAnswer: number;
+    correctAnswerIndex: number;
     answerIndex?: number;
 }
