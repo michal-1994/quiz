@@ -19,14 +19,19 @@ export class QuizComponent implements OnInit {
 
     ngOnInit() {
         this.quizService.getQuestions().subscribe((data: Question[]) => {
-            this.questions = data;
-
-            // TODO: Get number of questions
-            // TODO: Filter random questions
-            // TODO: Save questions
+            this.questions = this.getRandomQuestions(data, 10);
 
             console.log('QuizComponent [ngOnInit]: ', this.questions);
         });
+    }
+
+    getRandomQuestions(
+        questions: Question[],
+        numberOfQuestions: number
+    ): Question[] {
+        return [...questions]
+            .sort(() => 0.5 - Math.random())
+            .slice(0, numberOfQuestions);
     }
 
     handleNextQuestion() {
