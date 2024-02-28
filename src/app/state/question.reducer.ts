@@ -8,15 +8,17 @@ export interface QuestionState {
 }
 
 export const initialState: QuestionState = {
-    numberOfQuestions: 2,
+    numberOfQuestions: undefined,
     questions: []
 };
 
 export const questionReducer = createReducer(
     initialState,
     on(QuestionActions.setNumberOfQuestions, (state, { numberOfQuestions }) => {
-        console.log(numberOfQuestions);
-        return state;
+        return {
+            ...state,
+            numberOfQuestions: numberOfQuestions
+        };
     }),
     on(QuestionActions.initialQuestions, (state, { questions }) => {
         console.log(questions);
