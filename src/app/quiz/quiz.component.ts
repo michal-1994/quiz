@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CardComponent } from './components/card/card.component';
 import { QuizService } from './services/quiz.service';
 import { Question } from './models/question.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-quiz',
@@ -15,20 +16,21 @@ export class QuizComponent implements OnInit {
     public questions: Question[] = [];
     public currentIndex: number = 0;
 
-    constructor(private quizService: QuizService) {}
+    constructor(
+        private quizService: QuizService,
+        private route: ActivatedRoute
+    ) {}
 
     ngOnInit() {
-        this.quizService.getQuestions().subscribe((data: Question[]) => {
-            this.questions = this.getRandomQuestions(data, 10);
-
-            console.log('QuizComponent [ngOnInit]: ', this.questions);
+        this.route.queryParams.subscribe(params => {
+            this.quizService.getQuestions().subscribe((data: Question[]) => {
+                this.questions = this.getRandomQuestions(data, params['type']);
+            });
         });
     }
 
-    getRandomQuestions(
-        questions: Question[],
-        numberOfQuestions: number
-    ): Question[] {
+    getRandomQuestions(questions: Question[], type: string): Question[] {
+        const numberOfQuestions = type === 'quick' ? 5 : 10;
         return [...questions]
             .sort(() => 0.5 - Math.random())
             .slice(0, numberOfQuestions);

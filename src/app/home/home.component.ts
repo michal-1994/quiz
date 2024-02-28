@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
-import { Store } from '@ngrx/store';
-import { QuestionState } from '../state/question.reducer';
-import { QuestionActions } from '../state/question.actions';
 
 @Component({
     selector: 'app-home',
@@ -13,16 +10,15 @@ import { QuestionActions } from '../state/question.actions';
     styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-    constructor(
-        private router: Router,
-        private store: Store<QuestionState>
-    ) {}
+    constructor(private router: Router) {}
 
     handleStartQuiz(numberOfQuestions: number) {
-        this.store.dispatch(
-            QuestionActions.setNumberOfQuestions({ numberOfQuestions })
-        );
+        if (numberOfQuestions > 0) {
+            const typeOfQuestions = numberOfQuestions == 5 ? 'quick' : 'normal';
 
-        this.router.navigateByUrl('/quiz');
+            this.router.navigate(['/quiz'], {
+                queryParams: { type: typeOfQuestions }
+            });
+        }
     }
 }
