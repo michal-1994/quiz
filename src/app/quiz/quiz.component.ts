@@ -15,6 +15,7 @@ import { ActivatedRoute } from '@angular/router';
 export class QuizComponent implements OnInit {
     public questions: Question[] = [];
     public currentIndex: number = 0;
+    public title: string = '';
 
     constructor(
         private quizService: QuizService,
@@ -23,10 +24,15 @@ export class QuizComponent implements OnInit {
 
     ngOnInit() {
         this.route.queryParams.subscribe(params => {
+            this.setTitle(params['type']);
             this.quizService.getQuestions().subscribe((data: Question[]) => {
                 this.questions = this.getRandomQuestions(data, params['type']);
             });
         });
+    }
+
+    setTitle(type: string) {
+        this.title = type === 'quick' ? 'Szybka gra' : 'Normalna gra';
     }
 
     getRandomQuestions(questions: Question[], type: string): Question[] {
