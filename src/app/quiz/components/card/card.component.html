@@ -1,35 +1,39 @@
-<mat-card
-    *ngIf="questionIndex !== undefined && questionIndex === currentIndex"
-    class="question__card">
-    <mat-card-header class="question__card--title">
-        <mat-card-title
-            >{{ questionIndex + 1 }}. {{ data?.question }}</mat-card-title
-        >
-    </mat-card-header>
-    <mat-card-content>
-        <mat-radio-group
-            class="question__card--content"
-            [(ngModel)]="youtAnswer">
-            @for (answer of data?.answers; track answer) {
-                <mat-radio-button [value]="answer">{{
-                    answer
-                }}</mat-radio-button>
-            }
-        </mat-radio-group>
-        <mat-card-actions align="end">
-            <button
-                mat-raised-button
-                color="primary"
-                (click)="onClickPrevQuestion()">
-                Poprzednie
-            </button>
-            &nbsp;
-            <button
-                mat-raised-button
-                color="primary"
-                (click)="onClickNextQuestion()">
-                Następne
-            </button>
-        </mat-card-actions>
-    </mat-card-content>
-</mat-card>
+<ng-container *ngIf="questionData !== undefined">
+    <mat-card
+        *ngIf="questionIndex !== undefined && questionIndex === currentIndex"
+        class="question__card">
+        <mat-card-header class="question__card--title">
+            <mat-card-title
+                >{{ questionIndex + 1 }}.
+                {{ questionData.question }}</mat-card-title
+            >
+        </mat-card-header>
+        <mat-card-content>
+            <mat-radio-group class="question__card--content">
+                <ng-container
+                    *ngFor="let answer of questionData?.answers; let i = index">
+                    <mat-radio-button
+                        [value]="answer"
+                        (change)="handleChooseAnswer(questionData.id, i)"
+                        >{{ answer }}</mat-radio-button
+                    >
+                </ng-container>
+            </mat-radio-group>
+            <mat-card-actions align="end">
+                <button
+                    mat-raised-button
+                    color="primary"
+                    (click)="onClickPrevQuestion()">
+                    Poprzednie
+                </button>
+                &nbsp;
+                <button
+                    mat-raised-button
+                    color="primary"
+                    (click)="onClickNextQuestion()">
+                    Następne
+                </button>
+            </mat-card-actions>
+        </mat-card-content>
+    </mat-card>
+</ng-container>

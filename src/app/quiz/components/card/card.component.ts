@@ -20,19 +20,22 @@ import { MatButtonModule } from '@angular/material/button';
     styleUrl: './card.component.scss'
 })
 export class CardComponent {
-    @Input() data: Question | undefined;
+    @Input() questionData: Question | undefined;
     @Input() currentIndex: number | undefined;
     @Input() questionIndex: number | undefined;
     @Output() nextQuestionEvent = new EventEmitter<void>();
     @Output() prevQuestionEvent = new EventEmitter<void>();
 
-    public youtAnswer: string = '';
-
-    onClickNextQuestion() {
-        this.nextQuestionEvent.emit();
+    handleChooseAnswer(questionId: number, answerIndex: number) {
+        console.log('questionId: ', questionId);
+        console.log('answerIndex: ', answerIndex);
     }
 
     onClickPrevQuestion() {
         this.prevQuestionEvent.emit();
+    }
+
+    onClickNextQuestion() {
+        this.nextQuestionEvent.emit();
     }
 }

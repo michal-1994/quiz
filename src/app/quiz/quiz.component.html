@@ -3,7 +3,7 @@
     <div class="container">
         <app-card
             *ngFor="let questionItem of questions$ | async; let i = index"
-            [data]="questionItem"
+            [questionData]="questionItem"
             [currentIndex]="currentIndex"
             [questionIndex]="i"
             (nextQuestionEvent)="handleNextQuestion()"
