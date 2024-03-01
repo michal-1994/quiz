@@ -8,7 +8,7 @@ import { Store } from '@ngrx/store';
 import { QuestionState } from '../state/question.reducer';
 import { QuestionActions } from '../state/question.actions';
 import { Observable } from 'rxjs';
-import { selectFeatureQuestions } from '../state/question.selectors';
+import { selectQuestions } from '../state/question.selectors';
 
 @Component({
     selector: 'app-quiz',
@@ -45,7 +45,7 @@ export class QuizComponent implements OnInit {
                     })
                 );
 
-                this.questions$ = this.store.select(selectFeatureQuestions);
+                this.questions$ = this.store.select(selectQuestions);
             });
         });
     }
