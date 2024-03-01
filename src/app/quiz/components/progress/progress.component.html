@@ -1,6 +1,6 @@
 @if (currentUrl.includes('/quiz')) {
     <mat-progress-bar
         mode="determinate"
-        [value]="quizProgress"
+        [value]="quizProgress$ | async"
         color="accent"></mat-progress-bar>
 }

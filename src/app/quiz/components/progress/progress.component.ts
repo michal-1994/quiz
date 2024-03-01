@@ -1,13 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { QuestionState } from '../../../state/question.reducer';
 import { Store } from '@ngrx/store';
-import { selectFeatureQuestions } from '../../../state/question.selectors';
-import { Question } from '../../models/question.model';
+import { selectBarProgression } from '../../../state/question.selectors';
 @Component({
     selector: 'app-progress',
     standalone: true,
@@ -18,7 +17,7 @@ import { Question } from '../../models/question.model';
 export class ProgressComponent implements OnDestroy, OnInit {
     private routerSubscription: Subscription = new Subscription();
     public currentUrl: string = '';
-    public quizProgress: number = 90;
+    public quizProgress$: Observable<number> | undefined;
 
     constructor(
         private router: Router,
@@ -32,19 +31,7 @@ export class ProgressComponent implements OnDestroy, OnInit {
                 this.currentUrl = this.router.url;
             });
 
-        this.store
-            .select(selectFeatureQuestions)
-            .subscribe((questions: Question[]) => {
-                const questionsLength = questions.length;
-                const questionsAnsweredLength = questions.filter(
-                    question => question.answerIndex !== undefined
-                ).length;
-
-                if (questionsLength !== 0) {
-                    this.quizProgress =
-                        (questionsAnsweredLength * 100) / questionsLength;
-                }
-            });
+        this.quizProgress$ = this.store.select(selectBarProgression);
     }
 
     ngOnDestroy() {
