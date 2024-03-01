@@ -1,4 +1,4 @@
-<ng-container *ngIf="questionData !== undefined">
+@if (questionData !== undefined) {
     <mat-card
         *ngIf="questionIndex !== undefined && questionIndex === currentIndex"
         class="question__card">
@@ -37,4 +37,4 @@
             </mat-card-actions>
         </mat-card-content>
     </mat-card>
-</ng-container>
+}
