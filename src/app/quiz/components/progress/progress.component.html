@@ -1,1 +1,6 @@
-<div *ngIf="currentUrl === '/quiz'">Progress bar</div>
+@if (currentUrl.includes('/quiz')) {
+    <mat-progress-bar
+        mode="determinate"
+        [value]="quizProgress"
+        color="accent"></mat-progress-bar>
+}
