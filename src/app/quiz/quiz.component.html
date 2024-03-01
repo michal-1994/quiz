@@ -2,7 +2,7 @@
     <h2 class="quiz__page--title">{{ title }}</h2>
     <div class="container">
         <app-card
-            *ngFor="let questionItem of questions; let i = index"
+            *ngFor="let questionItem of questions$ | async; let i = index"
             [data]="questionItem"
             [currentIndex]="currentIndex"
             [questionIndex]="i"

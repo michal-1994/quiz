@@ -12,10 +12,10 @@ export const initialState: QuestionState = {
 
 export const questionReducer = createReducer(
     initialState,
-    on(QuestionActions.initialQuestions, (state, { questions }) => {
-        console.log(questions);
-        return state;
-    }),
+    on(QuestionActions.initialQuestions, (state, { questions }) => ({
+        ...state,
+        questions
+    })),
     on(QuestionActions.updateQuestion, (state, { questionId, answerIndex }) => {
         console.log(questionId, answerIndex);
         return state;

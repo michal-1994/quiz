@@ -4,6 +4,11 @@ import { CardComponent } from './components/card/card.component';
 import { QuizService } from './services/quiz.service';
 import { Question } from './models/question.model';
 import { ActivatedRoute } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { QuestionState } from '../state/question.reducer';
+import { QuestionActions } from '../state/question.actions';
+import { Observable } from 'rxjs';
+import { selectFeatureQuestions } from '../state/question.selectors';
 
 @Component({
     selector: 'app-quiz',
@@ -13,20 +18,34 @@ import { ActivatedRoute } from '@angular/router';
     styleUrl: './quiz.component.scss'
 })
 export class QuizComponent implements OnInit {
-    public questions: Question[] = [];
     public currentIndex: number = 0;
     public title: string = '';
+    public questionsLength: number = 0;
+    public questions$: Observable<Question[]> | undefined;
 
     constructor(
         private quizService: QuizService,
-        private route: ActivatedRoute
+        private route: ActivatedRoute,
+        private store: Store<QuestionState>
     ) {}
 
     ngOnInit() {
         this.route.queryParams.subscribe(params => {
             this.setTitle(params['type']);
             this.quizService.getQuestions().subscribe((data: Question[]) => {
-                this.questions = this.getRandomQuestions(data, params['type']);
+                const selectedQuestions = this.getRandomQuestions(
+                    data,
+                    params['type']
+                );
+
+                this.questionsLength = selectedQuestions.length;
+                this.store.dispatch(
+                    QuestionActions.initialQuestions({
+                        questions: selectedQuestions
+                    })
+                );
+
+                this.questions$ = this.store.select(selectFeatureQuestions);
             });
         });
     }
@@ -43,7 +62,7 @@ export class QuizComponent implements OnInit {
     }
 
     handleNextQuestion() {
-        if (this.currentIndex < this.questions.length - 1) {
+        if (this.currentIndex < this.questionsLength - 1) {
             this.currentIndex++;
         }
     }
