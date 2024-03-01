@@ -5,6 +5,9 @@ import { Question } from '../../models/question.model';
 import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
+import { Store } from '@ngrx/store';
+import { QuestionState } from '../../../state/question.reducer';
+import { QuestionActions } from '../../../state/question.actions';
 
 @Component({
     selector: 'app-card',
@@ -26,9 +29,15 @@ export class CardComponent {
     @Output() nextQuestionEvent = new EventEmitter<void>();
     @Output() prevQuestionEvent = new EventEmitter<void>();
 
+    constructor(private store: Store<QuestionState>) {}
+
     handleChooseAnswer(questionId: number, answerIndex: number) {
-        console.log('questionId: ', questionId);
-        console.log('answerIndex: ', answerIndex);
+        this.store.dispatch(
+            QuestionActions.updateQuestion({
+                questionId,
+                answerIndex
+            })
+        );
     }
 
     onClickPrevQuestion() {

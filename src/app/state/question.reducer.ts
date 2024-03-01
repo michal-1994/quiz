@@ -17,7 +17,12 @@ export const questionReducer = createReducer(
         questions
     })),
     on(QuestionActions.updateQuestion, (state, { questionId, answerIndex }) => {
-        console.log(questionId, answerIndex);
-        return state;
+        const newQuestions = state.questions.map((question: Question) =>
+            question.id === questionId ? { ...question, answerIndex } : question
+        );
+        return {
+            ...state,
+            questions: newQuestions
+        };
     })
 );

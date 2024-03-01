@@ -11,9 +11,10 @@
         <mat-card-content>
             <mat-radio-group class="question__card--content">
                 <ng-container
-                    *ngFor="let answer of questionData?.answers; let i = index">
+                    *ngFor="let answer of questionData.answers; let i = index">
                     <mat-radio-button
                         [value]="answer"
+                        [checked]="i === questionData.answerIndex"
                         (change)="handleChooseAnswer(questionData.id, i)"
                         >{{ answer }}</mat-radio-button
                     >
