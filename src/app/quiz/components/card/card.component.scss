@@ -8,5 +8,16 @@
         justify-content: flex-end;
         align-items: flex-start;
         flex-direction: column;
+
+        &__answer {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.5rem;
+
+            span {
+                color: green;
+            }
+        }
     }
 }

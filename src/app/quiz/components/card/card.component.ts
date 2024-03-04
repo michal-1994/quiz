@@ -10,6 +10,7 @@ import { QuestionState } from '../../../state/question.reducer';
 import { QuestionActions } from '../../../state/question.actions';
 import { Observable } from 'rxjs';
 import { selectQuizEnded } from '../../../state/question.selectors';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     selector: 'app-card',
@@ -19,7 +20,8 @@ import { selectQuizEnded } from '../../../state/question.selectors';
         MatCardModule,
         FormsModule,
         MatRadioModule,
-        MatButtonModule
+        MatButtonModule,
+        MatIconModule
     ],
     templateUrl: './card.component.html',
     styleUrl: './card.component.scss'
@@ -30,6 +32,7 @@ export class CardComponent implements OnInit {
     @Input() questionIndex: number | undefined;
     @Output() nextQuestionEvent = new EventEmitter<void>();
     @Output() prevQuestionEvent = new EventEmitter<void>();
+
     public quizIsEnded$: Observable<boolean> | undefined;
 
     constructor(private store: Store<QuestionState>) {}

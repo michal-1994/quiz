@@ -12,13 +12,22 @@
             <mat-radio-group class="question__card--content">
                 <ng-container
                     *ngFor="let answer of questionData.answers; let i = index">
-                    <mat-radio-button
-                        [value]="answer"
-                        [checked]="i === questionData.answerIndex"
-                        (change)="handleChooseAnswer(questionData.id, i)"
-                        [disabled]="quizIsEnded$ | async"
-                        >{{ answer }}</mat-radio-button
-                    >
+                    <div class="question__card--content__answer">
+                        <mat-radio-button
+                            [value]="answer"
+                            [checked]="i === questionData.answerIndex"
+                            (change)="handleChooseAnswer(questionData.id, i)"
+                            [disabled]="quizIsEnded$ | async"
+                            >{{ answer }}</mat-radio-button
+                        >
+                        <span
+                            *ngIf="
+                                (quizIsEnded$ | async) &&
+                                questionData.correctAnswerIndex === i
+                            ">
+                            <mat-icon>check</mat-icon>
+                        </span>
+                    </div>
                 </ng-container>
             </mat-radio-group>
             <mat-card-actions align="end">
