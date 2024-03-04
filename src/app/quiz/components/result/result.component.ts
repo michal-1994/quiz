@@ -14,11 +14,16 @@ import { CommonModule } from '@angular/common';
     styleUrl: './result.component.scss'
 })
 export class ResultComponent implements OnInit {
+    public quizIsEnded: boolean = false;
     public quizProgress$: Observable<number> | undefined;
 
     constructor(private store: Store<QuestionState>) {}
 
     ngOnInit() {
         this.quizProgress$ = this.store.select(selectBarProgression);
+    }
+
+    handleResult() {
+        this.quizIsEnded = true;
     }
 }

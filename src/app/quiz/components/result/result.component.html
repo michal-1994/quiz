@@ -3,11 +3,10 @@
         <button
             mat-raised-button
             color="accent"
-            [disabled]="(quizProgress$ | async) !== 100">
+            [disabled]="(quizProgress$ | async) !== 100"
+            (click)="handleResult()">
             Zakończ
         </button>
     </div>
-    <div *ngIf="(quizProgress$ | async) === 100" class="result__score">
-        SCORE
-    </div>
+    <div *ngIf="quizIsEnded" class="result__score">SCORE</div>
 </div>
