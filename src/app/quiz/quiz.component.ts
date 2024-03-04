@@ -9,11 +9,12 @@ import { QuestionState } from '../state/question.reducer';
 import { QuestionActions } from '../state/question.actions';
 import { Observable } from 'rxjs';
 import { selectQuestions } from '../state/question.selectors';
+import { ResultComponent } from './components/result/result.component';
 
 @Component({
     selector: 'app-quiz',
     standalone: true,
-    imports: [CommonModule, CardComponent],
+    imports: [CommonModule, CardComponent, ResultComponent],
     templateUrl: './quiz.component.html',
     styleUrl: './quiz.component.scss'
 })

@@ -1,10 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { Store } from '@ngrx/store';
+import { QuestionState } from '../../../state/question.reducer';
+import { Observable } from 'rxjs';
+import { selectBarProgression } from '../../../state/question.selectors';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-result',
     standalone: true,
-    imports: [],
+    imports: [CommonModule, MatButtonModule],
     templateUrl: './result.component.html',
     styleUrl: './result.component.scss'
 })
-export class ResultComponent {}
+export class ResultComponent implements OnInit {
+    public quizProgress$: Observable<number> | undefined;
+
+    constructor(private store: Store<QuestionState>) {}
+
+    ngOnInit() {
+        this.quizProgress$ = this.store.select(selectBarProgression);
+    }
+}

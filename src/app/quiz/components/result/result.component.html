@@ -1,1 +1,13 @@
-<p>result works!</p>
+<div class="result">
+    <div class="result__actions" align="center">
+        <button
+            mat-raised-button
+            color="accent"
+            [disabled]="(quizProgress$ | async) !== 100">
+            Zakończ
+        </button>
+    </div>
+    <div *ngIf="(quizProgress$ | async) === 100" class="result__score">
+        SCORE
+    </div>
+</div>
