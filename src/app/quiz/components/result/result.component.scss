@@ -1,3 +1,16 @@
 .result {
     margin-top: 2rem;
+
+    &__score {
+        text-align: center;
+
+        span {
+            font-size: 2rem;
+            line-height: 3rem;
+            font-weight: bold;
+            background: -webkit-linear-gradient(#ffffff, #3f51b5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }

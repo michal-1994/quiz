@@ -1,6 +1,7 @@
 <div class="result">
     <div class="result__actions" align="center">
         <button
+            *ngIf="!quizIsEnded"
             mat-raised-button
             color="accent"
             [disabled]="(quizProgress$ | async) !== 100"
@@ -8,5 +9,9 @@
             Zakończ
         </button>
     </div>
-    <div *ngIf="quizIsEnded" class="result__score">{{ result }}</div>
+    <div *ngIf="quizIsEnded" class="result__score">
+        <span>{{ quizScore }}%</span>
+        <br />
+        <span>{{ quizResult }}</span>
+    </div>
 </div>
