@@ -5,10 +5,12 @@ import { QuestionState } from '../../../state/question.reducer';
 import { Observable } from 'rxjs';
 import {
     selectBarProgression,
-    selectQuestions
+    selectQuestions,
+    selectQuizEnded
 } from '../../../state/question.selectors';
 import { CommonModule } from '@angular/common';
 import { Question } from '../../models/question.model';
+import { QuestionActions } from '../../../state/question.actions';
 
 @Component({
     selector: 'app-result',
@@ -19,19 +21,24 @@ import { Question } from '../../models/question.model';
 })
 export class ResultComponent implements OnInit {
     public quizResult: string = '';
-    public quizIsEnded: boolean = false;
-    public quizProgress$: Observable<number> | undefined;
     public quizScore: number = 0;
+    public quizProgress$: Observable<number> | undefined;
+    public quizIsEnded$: Observable<boolean> | undefined;
     public questions$: Observable<Question[]> | undefined;
 
     constructor(private store: Store<QuestionState>) {}
 
     ngOnInit() {
         this.quizProgress$ = this.store.select(selectBarProgression);
+        this.quizIsEnded$ = this.store.select(selectQuizEnded);
     }
 
     handleResult() {
-        this.quizIsEnded = true;
+        this.store.dispatch(
+            QuestionActions.updateQuiz({
+                quizIsEnded: true
+            })
+        );
 
         this.store
             .select(selectQuestions)

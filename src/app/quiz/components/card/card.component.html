@@ -16,6 +16,7 @@
                         [value]="answer"
                         [checked]="i === questionData.answerIndex"
                         (change)="handleChooseAnswer(questionData.id, i)"
+                        [disabled]="quizIsEnded$ | async"
                         >{{ answer }}</mat-radio-button
                     >
                 </ng-container>

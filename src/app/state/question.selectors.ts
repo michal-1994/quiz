@@ -21,3 +21,8 @@ export const selectBarProgression = createSelector(
         return 0;
     }
 );
+
+export const selectQuizEnded = createSelector(
+    selectFeature,
+    state => state.quizIsEnded
+);

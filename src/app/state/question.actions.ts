@@ -5,6 +5,7 @@ export const QuestionActions = createActionGroup({
     source: 'Questions',
     events: {
         'Initial Questions': props<{ questions: Question[] }>(),
-        'Update Question': props<{ questionId: number; answerIndex: number }>()
+        'Update Question': props<{ questionId: number; answerIndex: number }>(),
+        'Update Quiz': props<{ quizIsEnded: boolean }>()
     }
 });

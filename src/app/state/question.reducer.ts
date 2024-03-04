@@ -4,10 +4,12 @@ import { QuestionActions } from './question.actions';
 
 export interface QuestionState {
     questions: Question[];
+    quizIsEnded: boolean;
 }
 
 export const initialState: QuestionState = {
-    questions: []
+    questions: [],
+    quizIsEnded: false
 };
 
 export const questionReducer = createReducer(
@@ -23,6 +25,12 @@ export const questionReducer = createReducer(
         return {
             ...state,
             questions: newQuestions
+        };
+    }),
+    on(QuestionActions.updateQuiz, (state, { quizIsEnded }) => {
+        return {
+            ...state,
+            quizIsEnded
         };
     })
 );
