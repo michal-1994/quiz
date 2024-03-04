@@ -3,8 +3,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { Store } from '@ngrx/store';
 import { QuestionState } from '../../../state/question.reducer';
 import { Observable } from 'rxjs';
-import { selectBarProgression } from '../../../state/question.selectors';
+import {
+    selectBarProgression,
+    selectQuestions
+} from '../../../state/question.selectors';
 import { CommonModule } from '@angular/common';
+import { Question } from '../../models/question.model';
 
 @Component({
     selector: 'app-result',
@@ -14,8 +18,10 @@ import { CommonModule } from '@angular/common';
     styleUrl: './result.component.scss'
 })
 export class ResultComponent implements OnInit {
+    public result: string = '';
     public quizIsEnded: boolean = false;
     public quizProgress$: Observable<number> | undefined;
+    public questions$: Observable<Question[]> | undefined;
 
     constructor(private store: Store<QuestionState>) {}
 
@@ -25,5 +31,16 @@ export class ResultComponent implements OnInit {
 
     handleResult() {
         this.quizIsEnded = true;
+
+        this.store
+            .select(selectQuestions)
+            .subscribe((questions: Question[]) => {
+                const correctAnswers = questions.filter(
+                    (question: Question) =>
+                        question.answerIndex === question.correctAnswerIndex
+                );
+
+                this.result = `${correctAnswers.length}/${questions.length}`;
+            });
     }
 }
