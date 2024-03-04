@@ -1,5 +1,5 @@
 <div class="result">
-    <div class="result__actions" align="center">
+    <div class="result__actions" align="end">
         <button
             *ngIf="!(quizIsEnded$ | async)"
             mat-raised-button
@@ -7,6 +7,13 @@
             [disabled]="(quizProgress$ | async) !== 100"
             (click)="handleResult()">
             Zakończ
+        </button>
+        <button
+            *ngIf="quizIsEnded$ | async"
+            mat-raised-button
+            color="accent"
+            (click)="handleStartGameAgain()">
+            Graj jeszcze raz
         </button>
     </div>
     <div *ngIf="quizIsEnded$ | async" class="result__score">

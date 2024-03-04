@@ -54,6 +54,10 @@ export class ResultComponent implements OnInit {
             });
     }
 
+    handleStartGameAgain() {
+        console.log('handleStartGameAgain');
+    }
+
     generateResult(): string {
         let resultPrefix: string = '';
 
