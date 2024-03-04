@@ -11,6 +11,7 @@ import {
 import { CommonModule } from '@angular/common';
 import { Question } from '../../models/question.model';
 import { QuestionActions } from '../../../state/question.actions';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-result',
@@ -26,7 +27,10 @@ export class ResultComponent implements OnInit {
     public quizIsEnded$: Observable<boolean> | undefined;
     public questions$: Observable<Question[]> | undefined;
 
-    constructor(private store: Store<QuestionState>) {}
+    constructor(
+        private store: Store<QuestionState>,
+        private router: Router
+    ) {}
 
     ngOnInit() {
         this.quizProgress$ = this.store.select(selectBarProgression);
@@ -55,7 +59,12 @@ export class ResultComponent implements OnInit {
     }
 
     handleStartGameAgain() {
-        console.log('handleStartGameAgain');
+        this.store.dispatch(
+            QuestionActions.updateQuiz({
+                quizIsEnded: false
+            })
+        );
+        this.router.navigate(['/']);
     }
 
     generateResult(): string {
