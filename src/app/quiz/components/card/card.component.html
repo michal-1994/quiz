@@ -21,11 +21,22 @@
                             >{{ answer }}</mat-radio-button
                         >
                         <span
+                            class="correct"
                             *ngIf="
                                 (quizIsEnded$ | async) &&
                                 questionData.correctAnswerIndex === i
                             ">
                             <mat-icon>check</mat-icon>
+                        </span>
+                        <span
+                            class="bad"
+                            *ngIf="
+                                (quizIsEnded$ | async) &&
+                                questionData.answerIndex === i &&
+                                questionData.answerIndex !==
+                                    questionData.correctAnswerIndex
+                            ">
+                            <mat-icon>close</mat-icon>
                         </span>
                     </div>
                 </ng-container>

@@ -15,8 +15,12 @@
             align-items: center;
             gap: 0.5rem;
 
-            span {
+            .correct {
                 color: green;
+            }
+
+            .bad {
+                color: red;
             }
         }
     }
