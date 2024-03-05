@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "question": "Do któego domu w Hogwarcie należał Harry Potter?",
+        "question": "Do którego domu w Hogwarcie należał Harry Potter?",
         "answers": ["Hufflepuff", "Gryffindor", "Slytherin", "Ravenclaw"],
         "correctAnswerIndex": 1
     },
@@ -18,7 +18,7 @@
     },
     {
         "id": 3,
-        "question": "Który z wymienionych to tytuł czwartej części książki o przygodacg Harry'ego Pottera?",
+        "question": "Który z wymienionych to tytuł czwartej części książki o przygodach Harry'ego Pottera?",
         "answers": [
             "Harry Potter i więzień Azkabanu",
             "Harry Potter i Zakon Feniksa",
@@ -41,12 +41,12 @@
     },
     {
         "id": 6,
-        "question": "Kto jest dyrektorem Hogwartu po Dumbledore'ie?",
+        "question": "Kim z zawodu byli rodzice Hermiony?",
         "answers": [
-            "Dolores Umbridge",
-            "Severus Snape",
-            "Minerva McGonagall",
-            "Horace Slughorn"
+            "Nauczycielami",
+            "Weterynarzami",
+            "Dentystami",
+            "Adwokatami"
         ],
         "correctAnswerIndex": 2
     },
@@ -58,13 +58,18 @@
     },
     {
         "id": 8,
-        "question": "Ile domów szkolnych jest w Hogwarcie?",
-        "answers": ["2", "3", "4", "5"],
+        "question": "Kto był księciem Półkrwi?",
+        "answers": [
+            "Draco Malfoy",
+            "Lord Voldemort",
+            "Severus Snape",
+            "Albus Dumbledore"
+        ],
         "correctAnswerIndex": 2
     },
     {
         "id": 9,
-        "question": "Co to za stworzenie strzeże komnaty z tajemnic w Hogwarcie?",
+        "question": "Co to za stworzenie strzeże komnaty tajemnic w Hogwarcie?",
         "answers": ["Hippogrif", "Błyskawica", "Bazyliszek", "Nundu"],
         "correctAnswerIndex": 2
     },
@@ -81,13 +86,13 @@
     },
     {
         "id": 11,
-        "question": "Co to za zaklęcie pozwala na odbieranie wspomnień?",
+        "question": "Które zaklęcie pozwala na odbieranie wspomnień?",
         "answers": ["Obliviate", "Legilimens", "Petrificus Totalus", "Stupefy"],
         "correctAnswerIndex": 0
     },
     {
         "id": 12,
-        "question": "Co to za zaklęcie powodujące zastygnięcie przeciwnika?",
+        "question": "Które zaklęcie powodujące zastygnięcie przeciwnika?",
         "answers": [
             "Stupefy",
             "Petrificus Totalus",
@@ -98,14 +103,9 @@
     },
     {
         "id": 13,
-        "question": "Jaka postać pełni funkcję Szefa Domu Slytherin?",
-        "answers": [
-            "Severus Snape",
-            "Horace Slughorn",
-            "Bellatrix Lestrange",
-            "Lucius Malfoy"
-        ],
-        "correctAnswerIndex": 0
+        "question": "Jak nazywała się ropucha Neville'a Longbottoma?",
+        "answers": ["Helena", "Anastasia", "Amanda", "Teodora"],
+        "correctAnswerIndex": 3
     },
     {
         "id": 14,
@@ -115,13 +115,8 @@
     },
     {
         "id": 15,
-        "question": "Jak nazywa się druga część serii Harry Potter?",
-        "answers": [
-            "Harry Potter i Kamień Filozoficzny",
-            "Harry Potter i Komnata Tajemnic",
-            "Harry Potter i Więzień Azkabanu",
-            "Harry Potter i Zakon Feniksa"
-        ],
+        "question": "Ilu braci miał Ron?",
+        "answers": ["4", "5", "3", "2"],
         "correctAnswerIndex": 1
     },
     {
@@ -165,7 +160,7 @@
     },
     {
         "id": 20,
-        "question": "Szczu Rona Weasleya to tak naprawdę:",
+        "question": "Szczur Rona Weasleya to tak naprawdę:",
         "answers": [
             "Rabastan Lestrange",
             "Peter Pettigrew",
