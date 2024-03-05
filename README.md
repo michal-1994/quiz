@@ -1,7 +1,7 @@
 # <div align="center">Quiz</div>
 
 <div align="center">
-  <img src="/src/favicon.ico" alt="Ico" title="Ico" style="height: 25px;">
+  <img src="/src/favicon.ico" alt="Ico" title="Ico" style="height: 40px;">
 </div>
 
 1. [Introdution](#introdution)
