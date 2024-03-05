@@ -7,7 +7,10 @@
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
-        "format": "npx prettier --write ."
+        "format": "npx prettier --write .",
+        "predeploy": "ng build --base-href=/quiz/",
+        "deploy": "cross-env NODE_DEBUG=gh-pages gh-pages -d dist/quiz/browser/",
+        "postdeploy": "echo 'Deploy finished successful'"
     },
     "private": true,
     "dependencies": {
@@ -32,6 +35,8 @@
         "@angular/cli": "^17.2.1",
         "@angular/compiler-cli": "^17.2.0",
         "@types/jasmine": "~5.1.0",
+        "cross-env": "^7.0.3",
+        "gh-pages": "^6.1.1",
         "jasmine-core": "~5.1.0",
         "karma": "~6.4.0",
         "karma-chrome-launcher": "~3.2.0",
