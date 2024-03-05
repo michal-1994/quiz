@@ -1,48 +1,43 @@
 [
     {
         "id": 1,
-        "question": "Jak nazywa się szkoła czarodziejów, do której uczęszcza Harry Potter?",
-        "answers": ["Hogwarts", "Beauxbatons", "Durmstrang", "Ilvermorny"],
-        "correctAnswerIndex": 0
+        "question": "Do któego domu w Hogwarcie należał Harry Potter?",
+        "answers": ["Hufflepuff", "Gryffindor", "Slytherin", "Ravenclaw"],
+        "correctAnswerIndex": 1
     },
     {
         "id": 2,
-        "question": "Kto jest najlepszym przyjacielem Harry'ego Pottera?",
+        "question": "Na jakiej ulicy mieszkali Dursleyowie?",
         "answers": [
-            "Ron Weasley",
-            "Hermiona Granger",
-            "Neville Longbottom",
-            "Draco Malfoy"
+            "Privet Drive",
+            "Diagon Alley",
+            "Magnolia Crescent",
+            "Whinging Way"
         ],
         "correctAnswerIndex": 0
     },
     {
         "id": 3,
-        "question": "Kto jest mistrzem eliksirów w Hogwarcie?",
+        "question": "Który z wymienionych to tytuł czwartej części książki o przygodacg Harry'ego Pottera?",
         "answers": [
-            "Severus Snape",
-            "Pomona Sprout",
-            "Filius Flitwick",
-            "Horace Slughorn"
+            "Harry Potter i więzień Azkabanu",
+            "Harry Potter i Zakon Feniksa",
+            "Harry Potter i Komnata Tajemnic",
+            "Harry Potter i Czara Ognia"
         ],
         "correctAnswerIndex": 3
     },
     {
         "id": 4,
         "question": "Jakie zwierzę jest patronusem Harry'ego Pottera?",
-        "answers": ["Sowa", "Kot", "Pies", "Jelen"],
+        "answers": ["Sowa", "Kot", "Pies", "Jeleń"],
         "correctAnswerIndex": 3
     },
     {
         "id": 5,
-        "question": "Jaka postać jest związana z wytwórniami różdżek w Ollivander's?",
-        "answers": [
-            "Alastor Moody",
-            "Garrick Ollivander",
-            "Dolores Umbridge",
-            "Sybill Trelawney"
-        ],
-        "correctAnswerIndex": 1
+        "question": "Na jakiej pozycji Harry Potter grał w quidditch?",
+        "answers": ["Ściagający", "Pałkarz", "Szukający", "Bramkarz"],
+        "correctAnswerIndex": 2
     },
     {
         "id": 6,
@@ -57,76 +52,126 @@
     },
     {
         "id": 7,
-        "question": "Co to jest błyskawiczny odwrót?",
-        "answers": [
-            "Zaklęcie ochronne",
-            "Zaklęcie niewidzialności",
-            "Zaklęcie teleportacji",
-            "Zaklęcie paraliżujące"
-        ],
-        "correctAnswerIndex": 2
+        "question": "Jak nazywa się zaklęcie, które sprawia, że dany przedmiot przylatuje do osoby rzucającej zaklęcie?",
+        "answers": ["Accio", "Bombarda", "Partis Temporus", "Alohomora"],
+        "correctAnswerIndex": 0
     },
     {
         "id": 8,
-        "question": "Kto jest autorem książki 'Bestiariusz fantastyczny'?",
-        "answers": [
-            "Gilderoy Lockhart",
-            "Newt Scamander",
-            "Luna Lovegood",
-            "Rubeus Hagrid"
-        ],
-        "correctAnswerIndex": 1
-    },
-    {
-        "id": 9,
         "question": "Ile domów szkolnych jest w Hogwarcie?",
         "answers": ["2", "3", "4", "5"],
         "correctAnswerIndex": 2
     },
     {
+        "id": 9,
+        "question": "Co to za stworzenie strzeże komnaty z tajemnic w Hogwarcie?",
+        "answers": ["Hippogrif", "Błyskawica", "Bazyliszek", "Nundu"],
+        "correctAnswerIndex": 2
+    },
+    {
         "id": 10,
-        "question": "Jaki przedmiot nauczania prowadziła Sybill Trelawney?",
-        "answers": ["Latanie", "Wróżbiarstwo", "Transmutacja", "Zaklęcia"],
-        "correctAnswerIndex": 1
-    },
-    {
-        "id": 11,
-        "question": "Co studiuje Luna Lovegood?",
-        "answers": ["Zaklęcia", "Wróżbiarstwo", "Latanie", "Rozgwiazdy"],
-        "correctAnswerIndex": 3
-    },
-    {
-        "id": 12,
-        "question": "Kto jest założycielem domu Hufflepuff?",
+        "question": "Jaki przedmiot nauczania prowadził Gilderoy Lockhart?",
         "answers": [
-            "Salazar Slytherin",
-            "Rowena Ravenclaw",
-            "Helga Hufflepuff",
-            "Godric Gryffindor"
+            "Zaklęcia",
+            "Etykieta społeczna",
+            "Obrona przed czarną magią",
+            "Latanie"
         ],
         "correctAnswerIndex": 2
     },
     {
+        "id": 11,
+        "question": "Co to za zaklęcie pozwala na odbieranie wspomnień?",
+        "answers": ["Obliviate", "Legilimens", "Petrificus Totalus", "Stupefy"],
+        "correctAnswerIndex": 0
+    },
+    {
+        "id": 12,
+        "question": "Co to za zaklęcie powodujące zastygnięcie przeciwnika?",
+        "answers": [
+            "Stupefy",
+            "Petrificus Totalus",
+            "Expelliarmus",
+            "Impedimenta"
+        ],
+        "correctAnswerIndex": 1
+    },
+    {
         "id": 13,
-        "question": "Jak nazywa się zjawa, która podąża za osobami, które przeżyły śmierć?",
-        "answers": ["Thestral", "Kelpie", "Banshee", "Poltergeist"],
+        "question": "Jaka postać pełni funkcję Szefa Domu Slytherin?",
+        "answers": [
+            "Severus Snape",
+            "Horace Slughorn",
+            "Bellatrix Lestrange",
+            "Lucius Malfoy"
+        ],
         "correctAnswerIndex": 0
     },
     {
         "id": 14,
-        "question": "Kto jest ministrem magii w serii Harry Potter?",
+        "question": "Jakie zaklęcie służy do odblokowywania zamków?",
+        "answers": ["Alohomora", "Colloportus", "Lumos", "Nox"],
+        "correctAnswerIndex": 0
+    },
+    {
+        "id": 15,
+        "question": "Jak nazywa się druga część serii Harry Potter?",
         "answers": [
-            "Rufus Scrimgeour",
-            "Cornelius Fudge",
-            "Kingsley Shacklebolt",
-            "Dolores Umbridge"
+            "Harry Potter i Kamień Filozoficzny",
+            "Harry Potter i Komnata Tajemnic",
+            "Harry Potter i Więzień Azkabanu",
+            "Harry Potter i Zakon Feniksa"
+        ],
+        "correctAnswerIndex": 1
+    },
+    {
+        "id": 16,
+        "question": "Jakie właściwości posiadał zegar Weasleyów?",
+        "answers": [
+            "Mógł przewidywać przyszłość",
+            "Pozwalał czytać w umysłach innych",
+            "Pokazywał, gdzie są członkowie rodziny",
+            "Zatrzymywał czas"
         ],
         "correctAnswerIndex": 2
     },
     {
-        "id": 15,
-        "question": "Jaki kolor ma miotła Firebolt, na której lata Harry?",
-        "answers": ["Czarny", "Zielony", "Czerwony", "Złoty"],
-        "correctAnswerIndex": 3
+        "id": 17,
+        "question": "Jak nazywa się przedmiot nauczania, który prowadził Remus Lupin?",
+        "answers": [
+            "Zaklęcia",
+            "Transmutacja",
+            "Obrona przed czarną magią",
+            "Opieka nad Magicznymi Stworzeniami"
+        ],
+        "correctAnswerIndex": 2
+    },
+    {
+        "id": 18,
+        "question": "Na jakiej stacji znajdował się peron 9 i 3/4?",
+        "answers": ["Colindale", "Paddington", "King's Cross", "Waterloo"],
+        "correctAnswerIndex": 2
+    },
+    {
+        "id": 19,
+        "question": "Kogo opętał Tom Riddle, aby otworzyć Komnatę Tajemnic?",
+        "answers": [
+            "Lunę Lovegood",
+            "Harry'ego Potteraa",
+            "Ginny Weasley",
+            "Hermionę Granger"
+        ],
+        "correctAnswerIndex": 2
+    },
+    {
+        "id": 20,
+        "question": "Szczu Rona Weasleya to tak naprawdę:",
+        "answers": [
+            "Rabastan Lestrange",
+            "Peter Pettigrew",
+            "Bartemiusz Crouch Junior",
+            "Bellatrix Lestrange"
+        ],
+        "correctAnswerIndex": 1
     }
 ]
