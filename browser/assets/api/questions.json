@@ -1,0 +1,172 @@
+[
+    {
+        "id": 1,
+        "question": "Do którego domu w Hogwarcie należał Harry Potter?",
+        "answers": ["Hufflepuff", "Gryffindor", "Slytherin", "Ravenclaw"],
+        "correctAnswerIndex": 1
+    },
+    {
+        "id": 2,
+        "question": "Na jakiej ulicy mieszkali Dursleyowie?",
+        "answers": [
+            "Privet Drive",
+            "Diagon Alley",
+            "Magnolia Crescent",
+            "Whinging Way"
+        ],
+        "correctAnswerIndex": 0
+    },
+    {
+        "id": 3,
+        "question": "Który z wymienionych to tytuł czwartej części książki o przygodach Harry'ego Pottera?",
+        "answers": [
+            "Harry Potter i więzień Azkabanu",
+            "Harry Potter i Zakon Feniksa",
+            "Harry Potter i Komnata Tajemnic",
+            "Harry Potter i Czara Ognia"
+        ],
+        "correctAnswerIndex": 3
+    },
+    {
+        "id": 4,
+        "question": "Jakie zwierzę jest patronusem Harry'ego Pottera?",
+        "answers": ["Sowa", "Kot", "Pies", "Jeleń"],
+        "correctAnswerIndex": 3
+    },
+    {
+        "id": 5,
+        "question": "Na jakiej pozycji Harry Potter grał w quidditch?",
+        "answers": ["Ściagający", "Pałkarz", "Szukający", "Bramkarz"],
+        "correctAnswerIndex": 2
+    },
+    {
+        "id": 6,
+        "question": "Kim z zawodu byli rodzice Hermiony?",
+        "answers": [
+            "Nauczycielami",
+            "Weterynarzami",
+            "Dentystami",
+            "Adwokatami"
+        ],
+        "correctAnswerIndex": 2
+    },
+    {
+        "id": 7,
+        "question": "Jak nazywa się zaklęcie, które sprawia, że dany przedmiot przylatuje do osoby rzucającej zaklęcie?",
+        "answers": ["Accio", "Bombarda", "Partis Temporus", "Alohomora"],
+        "correctAnswerIndex": 0
+    },
+    {
+        "id": 8,
+        "question": "Kto był księciem Półkrwi?",
+        "answers": [
+            "Draco Malfoy",
+            "Lord Voldemort",
+            "Severus Snape",
+            "Albus Dumbledore"
+        ],
+        "correctAnswerIndex": 2
+    },
+    {
+        "id": 9,
+        "question": "Co to za stworzenie strzeże komnaty tajemnic w Hogwarcie?",
+        "answers": ["Hippogrif", "Błyskawica", "Bazyliszek", "Nundu"],
+        "correctAnswerIndex": 2
+    },
+    {
+        "id": 10,
+        "question": "Jaki przedmiot nauczania prowadził Gilderoy Lockhart?",
+        "answers": [
+            "Zaklęcia",
+            "Etykieta społeczna",
+            "Obrona przed czarną magią",
+            "Latanie"
+        ],
+        "correctAnswerIndex": 2
+    },
+    {
+        "id": 11,
+        "question": "Które zaklęcie pozwala na odbieranie wspomnień?",
+        "answers": ["Obliviate", "Legilimens", "Petrificus Totalus", "Stupefy"],
+        "correctAnswerIndex": 0
+    },
+    {
+        "id": 12,
+        "question": "Które zaklęcie powodujące zastygnięcie przeciwnika?",
+        "answers": [
+            "Stupefy",
+            "Petrificus Totalus",
+            "Expelliarmus",
+            "Impedimenta"
+        ],
+        "correctAnswerIndex": 1
+    },
+    {
+        "id": 13,
+        "question": "Jak nazywała się ropucha Neville'a Longbottoma?",
+        "answers": ["Helena", "Anastasia", "Amanda", "Teodora"],
+        "correctAnswerIndex": 3
+    },
+    {
+        "id": 14,
+        "question": "Jakie zaklęcie służy do odblokowywania zamków?",
+        "answers": ["Alohomora", "Colloportus", "Lumos", "Nox"],
+        "correctAnswerIndex": 0
+    },
+    {
+        "id": 15,
+        "question": "Ilu braci miał Ron?",
+        "answers": ["4", "5", "3", "2"],
+        "correctAnswerIndex": 1
+    },
+    {
+        "id": 16,
+        "question": "Jakie właściwości posiadał zegar Weasleyów?",
+        "answers": [
+            "Mógł przewidywać przyszłość",
+            "Pozwalał czytać w umysłach innych",
+            "Pokazywał, gdzie są członkowie rodziny",
+            "Zatrzymywał czas"
+        ],
+        "correctAnswerIndex": 2
+    },
+    {
+        "id": 17,
+        "question": "Jak nazywa się przedmiot nauczania, który prowadził Remus Lupin?",
+        "answers": [
+            "Zaklęcia",
+            "Transmutacja",
+            "Obrona przed czarną magią",
+            "Opieka nad Magicznymi Stworzeniami"
+        ],
+        "correctAnswerIndex": 2
+    },
+    {
+        "id": 18,
+        "question": "Na jakiej stacji znajdował się peron 9 i 3/4?",
+        "answers": ["Colindale", "Paddington", "King's Cross", "Waterloo"],
+        "correctAnswerIndex": 2
+    },
+    {
+        "id": 19,
+        "question": "Kogo opętał Tom Riddle, aby otworzyć Komnatę Tajemnic?",
+        "answers": [
+            "Lunę Lovegood",
+            "Harry'ego Potteraa",
+            "Ginny Weasley",
+            "Hermionę Granger"
+        ],
+        "correctAnswerIndex": 2
+    },
+    {
+        "id": 20,
+        "question": "Szczur Rona Weasleya to tak naprawdę:",
+        "answers": [
+            "Rabastan Lestrange",
+            "Peter Pettigrew",
+            "Bartemiusz Crouch Junior",
+            "Bellatrix Lestrange"
+        ],
+        "correctAnswerIndex": 1
+    }
+]
