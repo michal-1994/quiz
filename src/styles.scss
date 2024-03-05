@@ -15,3 +15,42 @@ body {
     max-width: 1200px;
     padding: 0 1.5rem;
 }
+
+h2.page__title {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 400;
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-bottom: 4.25rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h2.page__title:before {
+    position: absolute;
+    left: 0;
+    bottom: -2rem;
+    width: 50%;
+    left: 50%;
+    margin-left: -25%;
+    height: 1px;
+    content: '';
+    background-color: #aaa;
+}
+
+.page__title:after {
+    position: absolute;
+    display: block;
+    width: 2.1rem;
+    height: 2.1rem;
+    left: 50%;
+    margin-left: -1.5rem;
+    transform: rotate(-45deg);
+    bottom: -1.4rem;
+    content: 'I';
+    font-size: 2rem;
+    font-weight: 200;
+    color: #ff4081;
+}
